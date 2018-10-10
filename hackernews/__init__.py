@@ -10,7 +10,7 @@ __all__ = [
 ]
 
 __project__ = 'hackernews'
-__version__ = '1.0.0'
+__version__ = '1.1.0'
 __description__ = 'Hackernews client'
 __copyright__ = '2018, Kribesk'
 __long_description__ = 'A test task for Conntac GmbH'

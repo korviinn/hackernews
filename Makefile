@@ -85,7 +85,7 @@ clean: build_clean rm
 	@rm -rf docs/_build
 
 run: venv
-	@$(PIPENV) run $(PYTHON) -m $(NAME)
+	$(PIPENV) run $(PYTHON) -m $(NAME) --csv output.csv --count 20
 
 
 # === VERSION CONTROL AUTOMATION ===

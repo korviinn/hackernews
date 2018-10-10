@@ -18,9 +18,17 @@ class Story:
 # This design is a requirement
 # pylint: disable=too-few-public-methods
 class HackerStore(ABC):
+    """
+    Base class for store.
+    """
 
     @abstractmethod
     def append(self, story: Story):
+        """
+        Add a story to the store.
+
+        :param story:
+        """
         pass
 
 
@@ -29,6 +37,12 @@ class HackerStoreCSV(HackerStore):
     fieldnames = ['id', 'title', 'url', 'time', 'author', 'score']
 
     def __init__(self, file, **csvargs):
+        """
+        CSV implementation of the store.
+
+        :param file: Buffer-like object.
+        :param csvargs: Optional arguments for csv (see python's csv module).
+        """
         self.file = file
         self.writer = csv.DictWriter(
             self.file, fieldnames=self.fieldnames, **csvargs)
@@ -48,6 +62,9 @@ class HackerStoreCSV(HackerStore):
 # pylint: disable=too-few-public-methods
 class HackerStoreSqlite(HackerStore):
     def __init__(self, connection: sqlite3.Connection):
+        """
+        Sqlite3 implementation of the store.
+        """
         self.conn = connection
         with self.conn:
             self.conn.execute("DROP TABLE IF EXISTS news")

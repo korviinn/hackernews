@@ -1,24 +1,23 @@
 
-Hackernews
-==========
+   _   _            _             _   _                   
+  | | | | __ _  ___| | _____ _ __| \ | | _____      _____ 
+  | |_| |/ _` |/ __| |/ / _ \ '__|  \| |/ _ \ \ /\ / / __|
+  |  _  | (_| | (__|   <  __/ |  | |\  |  __/\ V  V /\__ \
+  |_| |_|\__,_|\___|_|\_\___|_|  |_| \_|\___| \_/\_/ |___/
 
 
+Hacker News Client. 
+
+See documentation in [docs](docs/index.rst).
+
+Make commands:
+
+      info      -   print project and interpreter version
+      test      -   run tests
+      run       -   run project
+      docs      -   build html docs in docs/_build/html
+      man       -   show manual page
+      clean     -   clean everything to 'checkout' state
 
 
-Hackernews client.
-
-
-Task description
-----------------
-
-Write a Python script which does the following: 
-  - Retrieve the “new”-stories from Hacker News (<https://news.ycombinator.com/>) 
-    with the following API: <https://github.com/HackerNews/API>
-  - Write an abstract base class HackerStore for storing the news 
-  - Write two sub classes which inherit from HackerStore 
-    * HackerStoreCSV: Writes the data into a CSV-file 
-    * HackerStoreSqlite: Writes the data into a sqlite database 
-  - Note: if the file/database already exists, it can be overwritten 
-  - You can use any public python-library which might be helpful 
-  - Write a README.md which describes how to use your script
-
+                                                        

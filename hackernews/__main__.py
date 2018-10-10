@@ -13,6 +13,10 @@ from hackernews.store import HackerStoreCSV, HackerStoreSqlite
 
 class Runner:
     def __init__(self):
+        """
+        Creates all the instances, wires them together, runs, displays progress bar,
+        handles errors and user interrupt.
+        """
         self.interrupted = False
         self.parser = argparse.ArgumentParser(
             description=hackernews.__description__,
